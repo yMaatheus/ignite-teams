@@ -9,7 +9,7 @@ import { FlatList } from "react-native";
 
 import { Button } from "@components/Button";
 import { ListEmpty } from "@components/ListEmpty";
-import { Container, Form, HeaderList, NumbersOfPlayers } from "./styles";
+import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
 
 export function Players() {
   const [team, setTeam] = useState('Time A');
@@ -47,9 +47,9 @@ export function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>
+        <NumberOfPlayers>
           {players.length}
-        </NumbersOfPlayers>
+        </NumberOfPlayers>
       </HeaderList>
 
       <FlatList
