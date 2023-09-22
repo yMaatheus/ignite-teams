@@ -94,12 +94,12 @@ export function Players() {
       navigation.navigate('groups')
     } catch (error) {
       console.log(error);
-      Alert.alert("Remover Grupo", "Não foi possível remover o grupo.")
+      Alert.alert("Remover Turma", "Não foi possível remover a turma.")
     }
   }
 
   async function handleGroupRemove() {
-    Alert.alert("Remover", "Deseja remover o grupo?", [
+    Alert.alert("Remover", "Deseja remover a turma?", [
       { text: "Não", style: "cancel" },
       { text: "Sim", onPress: () => groupRemove() }
     ])
@@ -177,7 +177,7 @@ export function Players() {
       }
 
       <Button
-        title="Remover Turma"
+        title="Remover turma"
         type="SECONDARY"
         onPress={handleGroupRemove}
       />
