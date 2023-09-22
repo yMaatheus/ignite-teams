@@ -8,6 +8,7 @@ import { FlatList } from 'react-native'
 import { Container } from './styles'
 import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import { groupsGetAll } from '@storage/group/groupsGetAll'
+import { Alert } from 'react-native'
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>([]);
@@ -23,6 +24,7 @@ export function Groups() {
        setGroups(data)
     } catch (error) {
       console.log(error);
+      Alert.alert("Turmas", "Não foi possível carregar as turmas.")
     }
   }
 
